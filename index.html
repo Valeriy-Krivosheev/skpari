@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://skpari.ru/static/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Форма проверки действительности полиса мигранта</title>
+</head>
+
+<body>
+  <main class="main">
+    <div class="green-line"></div>
+    <div class="container">
+      <div class="block">
+        <div class="block__left">
+          <h1 class="block__title">Форма проверки действительности полиса мигранта</h1>
+          <div class="block__item">
+            <form class="form">
+              <div class="form__item">
+                <div class="form__block">
+                  <label class="form__textField">
+                    <span class="form__inner">
+                      <div class="form__label">
+                        <span class="form__name">Номер полиса</span>
+                        <span class="form__name form__error"></span>
+                      </div>
+                      <input id="inputNum" class="form__input form__uppercase" type="text" pattern="^[a-zA-Z0-9]+$"
+                        required>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form__block">
+                  <label class="form__textField ">
+                    <span class="form__inner">
+                      <div class="form__label">
+                        <span class="form__name">Фамилия страхователя</span>
+                        <span class="form__name form__error"></span>
+                      </div>
+                      <input id="inputSurname" class="form__input" type="text" pattern="^[^0-9]+$" required>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form__block">
+                  <label class="form__textField">
+                    <span class="form__inner">
+                      <div class="form__label">
+                        <span class="form__name">Имя страхователя</span>
+                        <span class="form__name form__error"></span>
+                      </div>
+                      <input id="inputName" class="form__input" type="text" pattern="^[^0-9]+$" required>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form__block form__block--date">
+                  <label class="form__textField">
+                    <span class="form__inner">
+                      <div class="form__label">
+                        <span class="form__name">Дата рождения</span>
+                        <span class="form__name form__error"></span>
+                      </div>
+                      <input id="datefield" class="form__input" type="date" min="1932-01-29"required>
+                    </span>
+                    <?xml version="1.0" ?><svg class="svg" viewBox="0 0 32 32" width="20" heigth="20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: none;
+                          }
+                        </style>
+                      </defs>
+                      <title />
+                      <g data-name="Layer 2" id="Layer_2">
+                        <path
+                          d="M24,29H8a5,5,0,0,1-5-5V10A5,5,0,0,1,8,5H24a5,5,0,0,1,5,5V24A5,5,0,0,1,24,29ZM8,7a3,3,0,0,0-3,3V24a3,3,0,0,0,3,3H24a3,3,0,0,0,3-3V10a3,3,0,0,0-3-3Z" />
+                        <path
+                          d="M24,25H20a1,1,0,0,1-1-1V20a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v4A1,1,0,0,1,24,25Zm-3-2h2V21H21Z" />
+                        <path d="M28,13H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                        <path d="M11,9a1,1,0,0,1-1-1V4a1,1,0,0,1,2,0V8A1,1,0,0,1,11,9Z" />
+                        <path d="M21,9a1,1,0,0,1-1-1V4a1,1,0,0,1,2,0V8A1,1,0,0,1,21,9Z" />
+                      </g>
+                      <g id="frame">
+                        <rect class="cls-1" height="32" width="32" />
+                      </g>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form__block">
+                  <button class="button">Проверить полис</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="block__right">
+            <div class="block__w">
+                <div class="block__request">
+                  <div class="block__text">
+                    <span class="block__subtitle">РЕЗУЛЬТАТ ПРОВЕРКИ</span>
+                    <div class="block__info">
+                      <span class="block__span">Для проверки полиса</span>
+                      <span class="block__span">заполните все пустые поля</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="animate">
+              <div class="loader">Loading...</div>
+              <div class="svg-block">
+                <svg class="svg-animate" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" heigth="20" width="20">
+                  <path d="M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z" stroke="#3da35a"
+                    fill="transparent" />
+                </svg>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
